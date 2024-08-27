@@ -4,12 +4,18 @@ I only generated the data for my settings below.
 
 ![my settings](img/my%20settings.png)
 
-You can generate the data for your settings with the following steps. The scripts are in the `scripts` folder.
+You can generate the data for your settings with the following steps. The scripts are in the `scripts` folder. The PC should have Python installed.
 1. Use Bertom EQ Curve Analyzer 2 with VSX to generate and export the EQ measurement data named as `eq_data.csv`. Set the `calib.` so the overall curve is near 0 db.
  
 ![EQ Curve](img/eq%20curve.png)
 
 2. Run the python script `convert-eqcurveanalyzer2autoeq.py` to convert to AutoEQ data named as `autoeq_format.csv`.
-3. Run the python script `convert-autoeq2wavelet.py` to convert to Wavelet EQ Data named as `wavelet_data.txt`. This is the final data you want.
+3. Run the command below to install dependencies if not installed.
+
+```
+pip install pandas scipy
+```
+
+4. Run the python script `convert-autoeq2wavelet.py` to convert to Wavelet EQ Data named as `wavelet_data.txt`. This is the final data you want.
 
 If you generated your data, welcome to open a new issue or pull request to share here!
